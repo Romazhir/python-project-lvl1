@@ -22,7 +22,5 @@ jobs:
         python -m pip install poetry
         python -m pip install make
     - name: Run linter
-	    run: |
-		    make lint
-
-        
+      run: |
+        make lint
