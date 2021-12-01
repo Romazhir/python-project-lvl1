@@ -1,4 +1,4 @@
-name: Python Linter
+name: Py-linter
 
 on: [push]
 
