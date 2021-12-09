@@ -2,7 +2,7 @@
 
 from brain_games.games.all_games import get_user_name
 from brain_games.games.all_games import get_question_number
-from brain_games.games.even_game import get_right_answer
+from brain_games.games.even_game import get_even_right_answer
 from brain_games.games.all_games import get_user_answer
 from brain_games.games.all_games import get_game_result
 
@@ -21,7 +21,7 @@ def main():
             question_number = get_question_number()
             print('Question: {}'.format(question_number))
 
-            right_answer = get_right_answer(question_number)
+            right_answer = get_even_right_answer(question_number)
             user_answer = get_user_answer()
 
             game_result = get_game_result(right_answer, user_answer)
