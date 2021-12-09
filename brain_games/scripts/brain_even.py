@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-from brain_games.games.even_game import get_user_name
-from brain_games.games.even_game import get_question_number
+from brain_games.games.all_games import get_user_name
+from brain_games.games.all_games import get_question_number
 from brain_games.games.even_game import get_right_answer
-from brain_games.games.even_game import get_user_answer
-from brain_games.games.even_game import get_game_result
+from brain_games.games.all_games import get_user_answer
+from brain_games.games.all_games import get_game_result
 
 
 def main():
