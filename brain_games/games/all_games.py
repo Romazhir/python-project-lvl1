@@ -13,7 +13,7 @@ def get_user_name():
 
 # задаем число для игры
 def get_question_number():
-    return randint(1, 999)
+    return randint(1, 99)
 
 # print(get_question_number())
 
