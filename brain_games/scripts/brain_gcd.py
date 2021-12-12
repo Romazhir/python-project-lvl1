@@ -4,6 +4,7 @@ from brain_games.games.all_games import get_user_name
 from brain_games.games.all_games import get_question_number
 from brain_games.games.all_games import get_user_answer
 from brain_games.games.all_games import get_game_result
+from brain_games.games.all_games import to_check_answer_type
 from brain_games.games.gcd_game import get_gcd_right_answer
 
 
@@ -28,7 +29,10 @@ def main():
                                                 question_number_2)
             user_answer = get_user_answer()
 
-            game_result = get_game_result(right_answer, int(user_answer))
+            if to_check_answer_type(user_answer) is True:
+                game_result = get_game_result(right_answer, int(user_answer))
+            else:
+                game_result = False
 
             if game_result is True:
                 print('Correct!')
