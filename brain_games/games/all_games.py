@@ -25,6 +25,15 @@ def get_user_answer():
 # test_user_answer = get_user_answer()
 
 
+# проверяем, что ответ игрока - число
+def to_check_answer_type(string):
+    try:
+        int(string)
+        return True
+    except ValueError:
+        return False
+
+
 # Сравниваем ответ игрока с правильным ответом
 def get_game_result(arg_right_answer, arg_user_answer):
     if arg_user_answer == arg_right_answer:
