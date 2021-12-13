@@ -3,14 +3,13 @@
 from brain_games.games.all_games import get_user_name
 from brain_games.games.all_games import get_question_number
 from brain_games.games.all_games import get_user_answer
-from brain_games.games.all_games import to_check_answer_type
 from brain_games.games.all_games import get_game_result
 from brain_games.games.calc_game import get_calc_operator
 from brain_games.games.calc_game import get_calc_operator_symbol
 from brain_games.games.calc_game import get_calc_right_answer
 
 
-def main():
+def main():  # noqa: C901
     print('Welcome to the Brain Games!')
 
     user_name = get_user_name()
@@ -34,6 +33,14 @@ def main():
                                                  question_number_2,
                                                  calc_operator)
             user_answer = get_user_answer()
+
+            # не получалось импортировать эту функцию из модуля
+            def to_check_answer_type(string):
+                try:
+                    int(string)
+                    return True
+                except ValueError:
+                    return False
 
             if to_check_answer_type(user_answer) is True:
                 game_result = get_game_result(right_answer, int(user_answer))
