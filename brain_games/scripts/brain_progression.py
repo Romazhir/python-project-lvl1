@@ -30,7 +30,7 @@ def main():  # noqa: C901
             game_list_for_player = (get_game_list_for_player
                                     (hidden_element, game_list))
 
-            print('Question: ', *game_list_for_player, sep=' ')
+            print('Question:', *game_list_for_player, sep=' ')
 
             right_answer = game_list[hidden_element]
             user_answer = get_user_answer()
