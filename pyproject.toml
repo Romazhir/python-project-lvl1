@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Четыре математических игры, запускаемых в терминале"
 authors = ["Roman Zhirov <7997800@gmail.com>"]
 packages = [
   { include = "brain_games" },
