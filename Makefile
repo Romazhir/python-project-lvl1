@@ -33,3 +33,6 @@ brain-gcd:
 
 brain-progression:
 	poetry run brain-progression
+
+brain-prime:
+	poetry run brain-prime
