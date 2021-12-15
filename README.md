@@ -16,3 +16,5 @@ https://asciinema.org/a/hGgLqb91eH5SVakODU23sR18k
 https://asciinema.org/a/Z3PlHATKq7INHusxDP53tHINx
 
 https://asciinema.org/a/NO5mAYftyAYXfJvS7xr0hQbMe
+
+Учебный проект
