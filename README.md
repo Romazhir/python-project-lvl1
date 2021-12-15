@@ -7,26 +7,6 @@
 
 [![Actions Status](https://github.com/Romazhir/python-project-lvl1/workflows/Py-linter/badge.svg)](https://github.com/Romazhir/python-project-lvl1/actions)
 
-Учебный проект.
-
-Содержит четыре математических игры:
-- определение является ли число четным
-- определение результата математической операции
-- определение наибольшего делителя
-- поиск пропущенного числа в арифметической прогрессии
-- определение является ли число простым
-
-Запускается в терминале.
-Устанавливается, как пакет в python 3.
-
-Команды для запуска игр:
-- brain-even
-- brain-calc
-- brain-gcd
-- brain-progression
-- brain-prime
-
-
 https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B
 
 https://asciinema.org/a/q1HSU6LoKc3Iu6nugzUHUqJ5a
