@@ -19,7 +19,7 @@ def get_game_list(start_number, quantity_elements, progression_step):
         step_counter += 1
     return progression_list
 
-# game_list = get_game_list()
+# game_list = get_game_list(start_number, quantity_elements, progression_step)
 # print(game_list)
 
 
@@ -28,8 +28,8 @@ def get_hidden_element():
     return random.randint(0, 9)
 
 # формирование прогрессии для показа игроку
-# x_number = random.randint(0, 9)
-# right_answer = game_list[x_number]
+# hidden_element = random.randint(0, 9)
+# right_answer = game_list[hidden_element]
 
 
 def get_game_list_for_player(hidden_element, game_list):
@@ -43,6 +43,6 @@ def get_game_list_for_player(hidden_element, game_list):
         element_counter += 1
     return list_for_player
 
-# game_list_for_player = get_game_list_for_player()
+# game_list_for_player = get_game_list_for_player(hidden_element, game_list)
 # print(*game_list_for_player, sep=' ')
 # print(right_answer)
