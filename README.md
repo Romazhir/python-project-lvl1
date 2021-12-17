@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Romazhir/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Romazhir/python-project-lvl1/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/Romazhir/python-project-lvl1)
+[![Maintainability](https://api.codeclimate.com/v1/badges/dd5e7bb246c6596355cf/maintainability)](https://codeclimate.com/github/Romazhir/python-project-lvl1/maintainability)
 
 [![Actions Status](https://github.com/Romazhir/python-project-lvl1/workflows/Py-linter/badge.svg)](https://github.com/Romazhir/python-project-lvl1/actions)
 
