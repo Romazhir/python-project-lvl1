@@ -7,7 +7,7 @@
 
 [![Actions Status](https://github.com/Romazhir/python-project-lvl1/workflows/Py-linter/badge.svg)](https://github.com/Romazhir/python-project-lvl1/actions)
 
-<script id="asciicast-fKIZO6JbHBqxUeRrTmDU4MU0B" src="https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B.js" async></script>
+[![asciicast](https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B.svg)](https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B)
 
 https://asciinema.org/a/q1HSU6LoKc3Iu6nugzUHUqJ5a
 
