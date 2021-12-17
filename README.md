@@ -3,8 +3,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/Romazhir/python-project-lvl1)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
-
 [![Actions Status](https://github.com/Romazhir/python-project-lvl1/workflows/Py-linter/badge.svg)](https://github.com/Romazhir/python-project-lvl1/actions)
 
 [![asciicast](https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B.svg)](https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B)
