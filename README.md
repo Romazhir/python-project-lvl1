@@ -9,12 +9,12 @@
 
 [![asciicast](https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B.svg)](https://asciinema.org/a/fKIZO6JbHBqxUeRrTmDU4MU0B)
 
-https://asciinema.org/a/q1HSU6LoKc3Iu6nugzUHUqJ5a
+[![asciicast](https://asciinema.org/a/q1HSU6LoKc3Iu6nugzUHUqJ5a.svg)](https://asciinema.org/a/q1HSU6LoKc3Iu6nugzUHUqJ5a)
 
-https://asciinema.org/a/hGgLqb91eH5SVakODU23sR18k
+[![asciicast](https://asciinema.org/a/hGgLqb91eH5SVakODU23sR18k.svg)](https://asciinema.org/a/hGgLqb91eH5SVakODU23sR18k)
 
-https://asciinema.org/a/Z3PlHATKq7INHusxDP53tHINx
+[![asciicast](https://asciinema.org/a/Z3PlHATKq7INHusxDP53tHINx.svg)](https://asciinema.org/a/Z3PlHATKq7INHusxDP53tHINx)
 
-https://asciinema.org/a/NO5mAYftyAYXfJvS7xr0hQbMe
+[![asciicast](https://asciinema.org/a/NO5mAYftyAYXfJvS7xr0hQbMe.svg)](https://asciinema.org/a/NO5mAYftyAYXfJvS7xr0hQbMe)
 
 Учебный проект
