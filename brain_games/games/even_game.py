@@ -1,12 +1,24 @@
-# функции для brain-even
+from random import randint
 
-# Определяем правильный ответ, исходя из числа для игры
-def get_even_right_answer(number):
-    if number % 2 == 0:
+
+# правила игры
+def rules_even():
+    return 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
+# число для вопроса и игры
+def get_question_number():
+    return randint(1, 99)
+
+
+# проверка числа на четность
+def is_even(number):
+    return (number % 2) == 0
+
+
+# определение правильного ответа
+def get_even_right_answer(game_number):
+    if is_even(game_number) is True:
         return 'yes'
     else:
         return 'no'
-
-# test_number = randint(1,999)
-# print(test_number)
-# print(get_right_answer(test_number))
