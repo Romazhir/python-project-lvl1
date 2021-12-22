@@ -1,21 +1,34 @@
 # функции для brain-gcd
 
-# определяем наибольший делитель
-def get_gcd_right_answer(question_number_1, question_number_2):
-    question_numbers_list = [question_number_1, question_number_2]
-    question_numbers_list.sort()
+from random import randint
 
-    num1 = question_numbers_list[0]  # меньшее число
-    num2 = question_numbers_list[1]  # большее число
 
-    if num2 % num1 == 0:
-        return num1
+# правила игры
+def rules_gcd():
+    return 'Find the greatest common divisor of given numbers.'
 
-    divisor = num1 // 2
-    while divisor > 0:
-        if num1 % divisor == 0:
-            if num2 % divisor == 0:
-                return divisor
-        divisor -= 1
 
-# print(get_gcd_right_answer(145, 15))
+# случайное число
+def get_gcd_question_number():
+    return randint(1, 99)
+
+# строка для вопроса
+def get_gcd_question_string():
+    return '{} {}'.format(get_gcd_question_number(),
+                          get_gcd_question_number())
+
+
+# определяем правильный ответ (перевод в str можно перенести в движок)
+def get_gcd_right_answer(questions_string):
+    numbers_list = questions_string.split(' ')
+    
+    first_number = int(numbers_list[0])
+    second_number = int(numbers_list[1])
+    
+    while first_number != second_number:
+        if first_number > second_number:
+            first_number = first_number - second_number
+        else:
+            second_number = second_number - first_number        
+    
+    return str(first_number)
