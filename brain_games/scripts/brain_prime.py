@@ -1,43 +1,15 @@
 #!/usr/bin/env python
 
-from brain_games.games.all_games import get_user_name
-from brain_games.games.all_games import get_question_number
+from brain_games.game_drive import play_game
+from brain_games.games.prime_game import rules_prime
+from brain_games.games.prime_game import get_prime_question_number
 from brain_games.games.prime_game import get_prime_right_answer
-from brain_games.games.all_games import get_user_answer
-from brain_games.games.all_games import get_game_result
 
 
 def main():
-    print('Welcome to the Brain Games!')
-
-    user_name = get_user_name()
-
-    print('Hello, {}!'.format(user_name))
-    print('Answer "yes" if the number is prime. Otherwise answer "no".')
-
-    def to_play_prime_game():
-        attempt = 1
-        while attempt <= 3:
-            question_number = get_question_number()
-            print('Question: {}'.format(question_number))
-
-            right_answer = get_prime_right_answer(question_number)
-            user_answer = get_user_answer()
-
-            game_result = get_game_result(right_answer, user_answer)
-
-            if game_result is True:
-                print('Correct!')
-                attempt += 1
-            else:
-                print("'{}' is wrong answer ;(. Correct answer was '{}'.".
-                      format(user_answer, right_answer))
-                print("Let's try again, {}!".format(user_name))
-                return False
-        return True
-
-    if to_play_prime_game() is True:
-        print('Congratulations, {}!'.format(user_name))
+    play_game(rules_prime,
+              get_prime_question_number,
+              get_prime_right_answer)
 
 
 if __name__ == '__main__':
