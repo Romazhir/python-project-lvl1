@@ -1,48 +1,83 @@
 # функции для brain_progression
 
-import operator
 import random
 
 
-# формирование прогрессии для игры
-# start_number = random.randint(1, 99)
-# quantity_elements = 10
-# progression_step = random.randint(1, 99)
+FIRST_NUMBER_INDEX = 0
+FINITE_NUMBER_INDEX = 9
 
-def get_game_list(start_number, quantity_elements, progression_step):
-    step_counter = 1
-    number = start_number
+
+# правила игры
+def rules_progression():
+    return 'What number is missing in the progression?'
+
+
+# получаем первый элемент прогрессии
+def get_first_progression_number():
+    return random.randint(1, 99)
+
+
+# получаем разность прогрессии
+def get_common_difference():
+    return random.randint(1, 99)
+
+
+# получаем индекс скрытого элемента прогрессии
+def get_hidden_index():
+    return random.randint(FIRST_NUMBER_INDEX, FINITE_NUMBER_INDEX)
+
+
+# создаем арифметическую прогрессию
+def make_arithmetic_progression():
+    counter = 0
+    progression_number = get_first_progression_number()
+    common_difference = get_common_difference()
     progression_list = []
-    while step_counter <= quantity_elements:
-        progression_list.append(number)
-        number = operator.add(number, progression_step)
-        step_counter += 1
+
+    while counter <= FINITE_NUMBER_INDEX:
+        progression_list.append(progression_number)
+        progression_number += common_difference
+        counter += 1
     return progression_list
 
-# game_list = get_game_list(start_number, quantity_elements, progression_step)
-# print(game_list)
 
+# создаем прогрессию с пропущенным элементом
+def make_progression_list_for_question():
+    counter = 0
+    hidden_index = get_hidden_index()
+    progression_list = make_arithmetic_progression()
+    list_for_question = []
 
-# определение индекса элемента, который будет скрыт
-def get_hidden_element():
-    return random.randint(0, 9)
-
-# формирование прогрессии для показа игроку
-# hidden_element = random.randint(0, 9)
-# right_answer = game_list[hidden_element]
-
-
-def get_game_list_for_player(hidden_element, game_list):
-    element_counter = 0
-    list_for_player = []
-    while element_counter <= 9:
-        if element_counter != hidden_element:
-            list_for_player.append(game_list[element_counter])
+    while counter <= FINITE_NUMBER_INDEX:
+        if counter != hidden_index:
+            list_for_question.append(progression_list[counter])
         else:
-            list_for_player.append('..')
-        element_counter += 1
-    return list_for_player
+            list_for_question.append('..')
+        counter += 1
+    return list_for_question
 
-# game_list_for_player = get_game_list_for_player(hidden_element, game_list)
-# print(*game_list_for_player, sep=' ')
-# print(right_answer)
+
+# создаем строку для вопроса
+def get_progression_question():
+    return ' '.join(map(str, make_progression_list_for_question()))
+
+
+# получаем правильный ответ
+def get_progression_right_answer(question_string):
+    question_string = list(question_string.split())
+
+    if question_string.index('..') < (FINITE_NUMBER_INDEX - 2):
+        common_difference = (int(question_string[
+                             FINITE_NUMBER_INDEX]) - int(
+                             question_string[FINITE_NUMBER_INDEX - 1]))
+        progression_right_answer = (int(question_string[
+                                    question_string.index('..') + 1
+                                    ]) - common_difference)
+    else:
+        common_difference = (int(question_string[
+                             FIRST_NUMBER_INDEX + 1]) - int(
+                             question_string[FIRST_NUMBER_INDEX]))
+        progression_right_answer = (int(question_string[
+                                    question_string.index('..') - 1
+                                    ]) + common_difference)
+    return str(progression_right_answer)
