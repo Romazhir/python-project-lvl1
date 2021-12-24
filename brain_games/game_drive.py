@@ -20,7 +20,7 @@ def play_game(rules_game, games_question, check_right_answer):
         right_answer = check_right_answer(question)
         user_answer = input('Your answer: ')
 
-        if user_answer == right_answer:
+        if user_answer == str(right_answer):
             print('Correct!')
             attempts_counter += 1
         else:

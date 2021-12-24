@@ -32,4 +32,4 @@ def get_gcd_right_answer(questions_string):
         else:
             second_number = second_number - first_number
 
-    return str(first_number)
+    return first_number

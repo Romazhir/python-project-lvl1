@@ -29,4 +29,4 @@ def get_calc_question_expression():
 
 # определение правильного ответа
 def get_calc_right_answer(expression):
-    return str(eval(expression))
+    return eval(expression)

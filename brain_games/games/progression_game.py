@@ -80,4 +80,4 @@ def get_progression_right_answer(question_string):
         progression_right_answer = (int(question_string[
                                     question_string.index('..') - 1
                                     ]) + common_difference)
-    return str(progression_right_answer)
+    return progression_right_answer
