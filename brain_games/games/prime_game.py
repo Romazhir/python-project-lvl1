@@ -2,13 +2,7 @@ from random import randint
 
 
 # правила игры
-def rules_prime():
-    return 'Answer "yes" if the number is prime. Otherwise answer "no".'
-
-
-# число для вопроса и игры
-def get_prime_question_number():
-    return randint(1, 99)
+RULES = 'Answer "yes" if the number is prime. Otherwise answer "no".'
 
 
 # проверка, что число простое
@@ -21,8 +15,13 @@ def is_prime(number):
 
 
 # определяем правильный ответ
-def get_prime_right_answer(question_string):
-    if is_prime(question_string) is True:
-        return 'yes'
+def get_games_data():
+
+    question = randint(1, 99)
+
+    if is_prime(question) is True:
+        answer = 'yes'
     else:
-        return 'no'
+        answer = 'no'
+
+    return [str(question), str(answer)]
