@@ -17,7 +17,7 @@ def get_games_data():
     question = '{} {} {}'.format(number_1,
                                  symbol_operator,
                                  number_2)
- 
+
     answer = calc_operator(number_1, number_2)
 
     return [str(question), str(answer)]
