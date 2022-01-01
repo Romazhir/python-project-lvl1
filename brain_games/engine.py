@@ -12,15 +12,17 @@ def play_game(game):
     round_count = 1
 
     while round_count <= ROUND_NUMBERS:
-        print('Question: {}'.format(game.question))
+        games_data = list(game.get_games_data())
+
+        print('Question: {}'.format(games_data[0]))
         user_answer = input('Your answer: ')
 
-        if user_answer == game.right_answer:
+        if user_answer == games_data[1]:
             print('Correct!')
             round_count += 1
         else:
             print("'{}' is wrong answer ;(. Correct answer was '{}'.".
-                  format(user_answer, game.right_answer))
+                  format(user_answer, games_data[1]))
             print("Let's try again, {}!".format(user_name))
             return
 
