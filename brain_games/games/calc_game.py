@@ -1,32 +1,23 @@
-# функции для brain-calc
-
 from random import randint
 from random import choice
+import operator
 
 
-# правила игры
-def rules_calc():
-    return 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
+operators = {'+': operator.add, '-': operator.sub, '*': operator.mul}
 
 
-# случайное число
-def get_calc_question_number():
-    return randint(1, 99)
+# формирование вопроса и вычисление правильного ответа
+def get_games_data():
+    number_1 = randint(1, 99)
+    number_2 = randint(1, 99)
+    symbol_operator = choice(list(operators.keys()))
+    calc_operator = operators.get(symbol_operator)
 
+    question = '{} {} {}'.format(number_1,
+                                 symbol_operator,
+                                 number_2)
+ 
+    answer = calc_operator(number_1, number_2)
 
-# определение символа оператора
-def get_calc_operator_symbol():
-    operations = ['+', '-', '*']
-    return choice(operations)
-
-
-# строка для вопроса
-def get_calc_question_expression():
-    return '{} {} {}'.format(get_calc_question_number(),
-                             get_calc_operator_symbol(),
-                             get_calc_question_number())
-
-
-# определение правильного ответа
-def get_calc_right_answer(expression):
-    return eval(expression)
+    return [str(question), str(answer)]
