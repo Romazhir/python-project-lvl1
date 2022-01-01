@@ -2,13 +2,7 @@ from random import randint
 
 
 # правила игры
-def rules_even():
-    return 'Answer "yes" if the number is even, otherwise answer "no".'
-
-
-# число для вопроса и игры
-def get_question_number():
-    return randint(1, 99)
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 # проверка числа на четность
@@ -16,9 +10,13 @@ def is_even(number):
     return (number % 2) == 0
 
 
-# определение правильного ответа
-def get_even_right_answer(game_number):
-    if is_even(game_number) is True:
-        return 'yes'
+# формирование данных для игры
+def get_games_data():
+
+    question_number = randint(1, 99)
+
+    if is_even(question_number) is True:
+        right_answer = 'yes'
     else:
-        return 'no'
+        right_answer = 'no'
+    return [str(question_number), str(right_answer)]
