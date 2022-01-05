@@ -8,21 +8,19 @@ def play_game(game):
     print('Hello, {}!'.format(user_name))
     print(game.RULES)
 
-    ROUND_NUMBERS = 3
-    round_count = 1
+    for round in range(0, game.ROUND_NUMBERS):
+        question_answer = tuple(game.generate_question_answer())
+        question = question_answer[0]
+        answer = question_answer[1]
 
-    while round_count <= ROUND_NUMBERS:
-        games_data = list(game.get_games_data())
-
-        print('Question: {}'.format(games_data[0]))
+        print('Question: {}'.format(question))
         user_answer = input('Your answer: ')
 
-        if user_answer == games_data[1]:
+        if user_answer == answer:
             print('Correct!')
-            round_count += 1
         else:
             print("'{}' is wrong answer ;(. Correct answer was '{}'.".
-                  format(user_answer, games_data[1]))
+                  format(user_answer, answer))
             print("Let's try again, {}!".format(user_name))
             return
 
