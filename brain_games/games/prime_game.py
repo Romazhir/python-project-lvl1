@@ -1,22 +1,19 @@
 from random import randint
 
 
-# правила игры
 RULES = 'Answer "yes" if the number is prime. Otherwise answer "no".'
+ROUND_NUMBERS = 3
 
 
-# проверка, что число простое
 def is_prime(number):
-    divisor = 2
-    while divisor ** 2 <= number and (number
-                                      % divisor != 0):
-        divisor += 1
-    return (divisor ** 2) > number
+    for divisor in range(2, number // 2 + 1):
+        if divisor < number and number % divisor == 0:
+            return False
+    else:
+        return True
 
 
-# определяем правильный ответ
-def get_games_data():
-
+def generate_question_answer():
     question = randint(1, 99)
 
     if is_prime(question) is True:
@@ -24,4 +21,4 @@ def get_games_data():
     else:
         answer = 'no'
 
-    return [str(question), str(answer)]
+    return (str(question), str(answer))
