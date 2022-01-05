@@ -4,11 +4,11 @@ import operator
 
 
 RULES = 'What is the result of the expression?'
+ROUND_NUMBERS = 3
 operators = {'+': operator.add, '-': operator.sub, '*': operator.mul}
 
 
-# формирование вопроса и вычисление правильного ответа
-def get_games_data():
+def generate_question_answer():
     number_1 = randint(1, 99)
     number_2 = randint(1, 99)
     symbol_operator = choice(list(operators.keys()))
@@ -20,4 +20,4 @@ def get_games_data():
 
     answer = calc_operator(number_1, number_2)
 
-    return [str(question), str(answer)]
+    return (str(question), str(answer))
