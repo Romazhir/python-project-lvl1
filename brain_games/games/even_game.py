@@ -1,22 +1,19 @@
 from random import randint
 
 
-# правила игры
 RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+ROUND_NUMBERS = 3
 
 
-# проверка числа на четность
 def is_even(number):
     return (number % 2) == 0
 
 
-# формирование вопроса и вычисление правильного ответа
-def get_games_data():
-
+def generate_question_answer():
     question = randint(1, 99)
 
     if is_even(question) is True:
-        right_answer = 'yes'
+        answer = 'yes'
     else:
-        right_answer = 'no'
-    return [str(question), str(right_answer)]
+        answer = 'no'
+    return (str(question), str(answer))
