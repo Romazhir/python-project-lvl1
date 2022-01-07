@@ -6,7 +6,7 @@ RULE = 'Answer "yes" if the number is prime. Otherwise answer "no".'
 
 def is_prime(number):
     if number <= 1:
-            return False
+        return False
     for divisor in range(2, number // 2 + 1):
         if divisor < number and number % divisor == 0:
             return False
