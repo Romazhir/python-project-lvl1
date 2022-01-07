@@ -3,6 +3,7 @@ import prompt
 
 ROUND_NUMBERS = 3
 
+
 def play_game(game):
     print('Welcome to the Brain Games!')
 
